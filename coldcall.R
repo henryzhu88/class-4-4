@@ -1,10 +1,10 @@
 library(tidyverse)
 
+cold_call <- function(n = 1){
+  classdata <-read_csv("class-list-1.csv", col_names = FALSE)
 
-classdata<-read_csv("class-list-1.csv")
-cold_call <- function(){
-  classdata<-read_csv("class-list-1.csv")
+  classdata[sample(1:39, n),]
+}
 
-  classdata[[sample(1:30, 1)]]}
 cold_call()
   
